@@ -36,7 +36,7 @@ main {
 
 .loaded.light main,
 .loaded.dark main {
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 2s ease-in-out;
     transition: color 0.3s ease-in-out;
 }
 
