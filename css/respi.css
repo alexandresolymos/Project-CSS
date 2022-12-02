@@ -1,0 +1,398 @@
+/*!
+ * Respi v2.0.0.0
+ * Copyright 2022
+ * Licensed under MIT (https://github.com/alexandre-solymos
+ * With 
+ * http://meyerweb.com/eric/tools/css/reset/ 
+   Reset CSS
+*/
+
+/* COLORS */
+/* Ici vous pouvez changez vos couleurs par défauts */
+
+
+:root {
+	--main-color: #f3f2f0;
+	--red-color: #e12c2c;
+	--text-color: #fff;
+	--white: #fff;
+	--black: #000;
+}
+
+/* Utilisation exemple : background-color: var(--black); */
+
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, strong,
+b, u, i, dt, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, thead, tr, th, td,
+article,
+figure, figcaption, footer, header, 
+menu, nav, output, section, summary,
+time, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* POSITIONING */
+.ml {
+	margin-left: auto;
+}
+
+.mr {
+	margin-right: auto;
+}
+
+.menu-img {
+	display: none;
+}
+
+.left {
+	text-align: left;
+  }
+  
+.right {
+	text-align: right;
+  }
+  
+.center {
+	text-align: center;
+	margin: auto;
+  }
+  
+.justify {
+	text-align: justify;
+  }
+
+.flex {
+    display: flex;
+  }
+
+.fixed {
+	position: fixed;
+	margin: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+.fixed div {
+	background: black;
+  }
+
+  /* MARGE */
+.mt-3 {
+   margin-top: 3em;
+  }
+
+.ml-1 {
+    margin-left: 1em;
+  }
+
+
+.box-row {
+	box-sizing: border-box;
+    min-height: 1rem;
+    margin-bottom: 0;
+    background: #007FFF;
+    border: 1px solid #FFF;
+    border-radius: 2px;
+    overflow: hidden;
+    text-align: center;
+	color: #fff;
+}
+
+  
+  
+  /* ==== GRID SYSTEM ==== */
+  
+.container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+  }
+
+.container-all {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  
+.row {
+	position: relative;
+	width: 100%;
+	z-index: -1;
+  }
+
+  
+.row [class^="col"] {
+	float: left;
+	min-height: 0.125rem;
+  }
+
+  
+.col-1, .col-2,
+.col-3, .col-4,
+.col-5, .col-6,
+.col-7, .col-8,
+.col-9, .col-10,
+.col-11,.col-12 {
+	width: 100%;
+  }
+  
+.col-1-m {
+	width: 8.33%;
+  }
+  
+.col-2-m {
+	width: 16.66%;
+  }
+  
+.col-3-m {
+	width: 25%;
+  }
+  
+.col-4-m {
+	width: 33.33%;
+  }
+  
+.col-5-m {
+	width: 41.66%;
+  }
+  
+.col-6-m {
+	width: 50%;
+  }
+  
+.col-7-m {
+	width: 58.33%;
+  }
+  
+.col-8-m {
+	width: 66.66%;
+  }
+  
+.col-9-m {
+	width: 75%;
+  }
+  
+.col-10-m {
+	width: 83.33%;
+  }
+  
+.col-11-m {
+	width: 91.66%;
+  }
+  
+.col-12-m {
+	width: 100%;
+  }
+  
+.row::after {
+	  content: "";
+	  display: table;
+	  clear: both;
+  }
+  
+ 
+  @media only screen and (min-width: 33.75em) {  /* 540px */
+	.container {
+	  width: 80%;
+	}
+  }
+  
+  @media only screen and (min-width: 45em) {  /* 720px */
+	.col-1-t {
+		width: 8.33%;
+	  }
+	  
+	  .col-2-t {
+		width: 16.66%;
+	  }
+	  
+	  .col-3-t {
+		width: 25%;
+	  }
+	  
+	  .col-4-t {
+		width: 33.33%;
+	  }
+	  
+	  .col-5-t {
+		width: 41.66%;
+	  }
+	  
+	  .col-6-t {
+		width: 50%;
+	  }
+	  
+	  .col-7-t {
+		width: 58.33%;
+	  }
+	  
+	  .col-8-t {
+		width: 66.66%;
+	  }
+	  
+	  .col-9-t {
+		width: 75%;
+	  }
+	  
+	  .col-10-t {
+		width: 83.33%;
+	  }
+	  
+	  .col-11-t {
+		width: 91.66%;
+	  }
+	  
+	  .col-12-t {
+		width: 100%;
+	  }
+	
+  }
+  
+  @media only screen and (min-width: 60em) { /* 960px */
+	.container {
+	  width: 75%;
+	  max-width: 60rem;
+	}
+
+	.col-1 {
+		width: 8.33%;
+	  }
+	
+	  .col-2 {
+		width: 16.66%;
+	  }
+	
+	  .col-3 {
+		width: 25%;
+	  }
+	
+	  .col-4 {
+		width: 33.33%;
+	  }
+	
+	  .col-5 {
+		width: 41.66%;
+	  }
+	
+	  .col-6 {
+		width: 50%;
+	  }
+	
+	  .col-7 {
+		width: 58.33%;
+	  }
+	
+	  .col-8 {
+		width: 66.66%;
+	  }
+	
+	  .col-9 {
+		width: 75%;
+	  }
+	
+	  .col-10 {
+		width: 83.33%;
+	  }
+	
+	  .col-11 {
+		width: 91.66%;
+	  }
+	
+	  .col-12 {
+		width: 100%;
+	  }
+	
+  }
+  
+    
+  @media only screen and (min-width: 75em) {
+	/* 1200px 
+	* Pas obligatoire mais peut etre utile
+	*/
+  
+	.col-1-l {
+		width: 8.33%;
+	  }
+	
+	  .col-2-l {
+		width: 16.66%;
+	  }
+	
+	  .col-3-l {
+		width: 25%;
+	  }
+	
+	  .col-4-l {
+		width: 33.33%;
+	  }
+	
+	  .col-5-l {
+		width: 41.66%;
+	  }
+	
+	  .col-6-l {
+		width: 50%;
+	  }
+	
+	  .col-7-l {
+		width: 58.33%;
+	  }
+	
+	  .col-8-l {
+		width: 66.66%;
+	  }
+	
+	  .col-9-l {
+		width: 75%;
+	  }
+	
+	  .col-10-l {
+		width: 83.33%;
+	  }
+	
+	  .col-11-l {
+		width: 91.66%;
+	  }
+	
+	  .col-12-l {
+		width: 100%;
+	  }
+	
+  }

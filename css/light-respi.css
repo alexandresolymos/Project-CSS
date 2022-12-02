@@ -1,0 +1,78 @@
+/*!
+ * Page Css comprenant la liste des modifications du style
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    flex: 1;
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.light main {
+    background-color: white;
+    color: black;
+}
+
+.light button {
+    color: #000;
+}
+
+/* The trick is to put the transition just on when the body is .loaded (after having set the class from localStorage) */
+
+.loaded.light main,
+.loaded.dark main {
+    transition: background-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+nav {
+    padding: 0 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    line-height: 3rem;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+button:after {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.light button:after {
+    content: "";
+    background-image: url('../assets/svg/sun-light-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    transition: background-image 0.3s ease-in-out;
+
+}

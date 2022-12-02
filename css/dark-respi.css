@@ -1,0 +1,18 @@
+.dark button:after {
+    content: "";
+    background-image: url('../assets/svg/moon-svgrepo-com.svg');
+    transition: background-image 0.3s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+}
+
+.dark main {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.dark button {
+    color: #FFF;
+}
