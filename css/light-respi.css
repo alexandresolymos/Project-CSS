@@ -40,7 +40,9 @@ main {
 
 .loaded.light main,
 .loaded.dark main {
-    transition: background-color 5.0s ease-in-out;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
     transition: color 0.3s ease-in-out;
 }
 
