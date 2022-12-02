@@ -11,7 +11,7 @@
 .dark main {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    transition: background-color 2s ease-in-out;
+    transition: background-color 5.0s ease-in-out;
 }
 
 .dark button {
