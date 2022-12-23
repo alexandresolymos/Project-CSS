@@ -12,18 +12,16 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+
 }
 
-main {
+.body {
     flex: 1;
     color: black;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.light main {
+.light .body {
     background-color: white;
     color: black;
     -webkit-transition: background-color 1000ms linear;
@@ -32,14 +30,14 @@ main {
 
 }
 
-.light button {
+.light .switch {
     color: #000;
 }
 
 /* The trick is to put the transition just on when the body is .loaded (after having set the class from localStorage) */
 
-.loaded.light main,
-.loaded.dark main {
+.loaded.light .body,
+.loaded.dark .body {
     -webkit-transition: background-color 1000ms linear;
     -ms-transition: background-color 1000ms linear;
     transition: background-color 1000ms linear;
@@ -57,22 +55,24 @@ nav {
     align-items: center;
 }
 
-button {
+.switch {
     display: flex;
     align-items: center;
     appearance: none;
     border: none;
     background-color: transparent;
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    margin-left: auto;
+    padding: 1rem;
 }
 
-button:after {
+.switch:after {
     margin-left: 0.5rem;
     font-size: 1.5rem;
 }
 
-.light button:after {
+.light .switch:after {
     content: "";
     background-image: url('../assets/svg/sun-light-svgrepo-com.svg');
     background-repeat: no-repeat;
@@ -82,3 +82,47 @@ button:after {
     transition: background-image 0.3s ease-in-out;
 
 }
+
+
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes curser {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+@keyframes curser1 {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+.light .title span
+{
+    color: #1789FC;
+}
+

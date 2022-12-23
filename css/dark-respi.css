@@ -1,4 +1,7 @@
-.dark button:after {
+
+/* * Switch*/
+.dark .switch:after
+{
     content: "";
     background-image: url('../assets/svg/moon-svgrepo-com.svg');
     transition: background-image 0.3s ease-in-out;
@@ -8,14 +11,127 @@
     height: 24px;
 }
 
-.dark main {
-    background-color: rgba(0, 0, 0, 0.8);
+.dark .body
+{
+    background-color: #172A3A;
     color: white;
     -webkit-transition: background-color 1000ms linear;
     -ms-transition: background-color 1000ms linear;
     transition: background-color 1000ms linear;
 }
 
-.dark button {
+.dark .switch
+{
     color: #FFF;
 }
+
+.dark .title
+{
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.dark .title span
+{
+    color: #1789FC;
+}
+
+/* * Typing effect*/
+
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 2rem;
+}
+.text span {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 3rem;
+}
+
+.t1 {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: type 2s steps(20, end), curser1 0.8s 4;
+  border-right: 8px solid transparent;
+  animation-delay: 0;
+  transition: 0.2s;
+}
+
+.t2 {
+  text-align: left;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: type 2s steps(13, end), curser1 0.1s 4;
+  border-right: 8px solid white;
+  animation-fill-mode: both;
+  animation-delay: 3s;
+}
+
+.t3 {
+  text-align: left;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: type 2s steps(13, end), curser 0.8s infinite;
+  border-right: 8px solid white;
+  animation-fill-mode: both;
+  animation-delay: 5s;
+}
+
+.t1:active {
+  border-right: 8px solid transparent;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes curser {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+@keyframes curser1 {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+

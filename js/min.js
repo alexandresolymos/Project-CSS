@@ -24,3 +24,6 @@ document.querySelector("button").addEventListener("click", () => {
     localStorage.setItem("mode", mode);
 });
 
+
+
+// Typing effect
